@@ -1,0 +1,416 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!-- Carousel Start -->
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="img/carousel-3.jpeg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <i class="fa fa-home fa-4x text-primary mb-4 d-none d-sm-block"></i>
+                        <h1 class="display-2 text-uppercase text-white mb-md-4">Design. Build. Explore</h1>
+                        @* <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Get A Quote</a> *@
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="img/carousel-4.jpeg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <i class="fa fa-tools fa-4x text-primary mb-4 d-none d-sm-block"></i>
+                        <h1 class="display-2 text-uppercase text-white mb-md-4">From Concept to Construction</h1>
+                        <a asp-page="/Contact" class="btn btn-primary py-md-3 px-md-5 mt-2">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- Carousel End -->
+<!-- About Start -->
+<div class="container-fluid py-6 px-5">
+    <div class="row g-5 justify-content-center">
+        <div class="col-lg-12">
+            <h1 class="text-uppercase mb-4">We <span class="text-primary">Design</span>. We <span class="text-primary">Build</span>. We <span class="text-primary">Deliver Quality</span>.</h1>
+            <p><b>Chen Structure Hub</b> is a professional architectural design, structural engineering and construction company providing modern, safe and cost-effective building solutions. We specialize in residential, commercial and institutional projects from concept design to project completion.</p>
+            <div class="row gx-5 py-2">
+                <div class="col-sm-6 mb-2">
+                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Professionalism</p>
+                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Quality workmanship</p>
+                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Integrity</p>
+                </div>
+                <div class="col-sm-6 mb-2">
+                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Innovation</p>
+                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Client satisfaction</p>
+                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Safety </p>
+                </div>
+            </div>
+            <p class="mb-4">We turn ideas into strong, functional and beautiful structures through proper planning, engineering design and quality construction.</p>
+
+        </div>
+    </div>
+</div>
+<!-- About End -->
+<!-- Services Start -->
+<div class="container-fluid bg-light py-6 px-5">
+    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+        <h1 class="display-5 text-uppercase mb-4">We Provide <span class="text-primary">The Best</span> Services</h1>
+    </div>
+    <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+            <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                <img class="img-fluid" src="img/architectural-design.jpg" alt="">
+                <div class="service-icon bg-white">
+                    <i class="fa fa-3x fa-drafting-compass text-primary"></i>
+                </div>
+                <div class="px-4 pb-4">
+                    <h4 class="text-uppercase mb-3">Architecture Design</h4>
+                    <p>We prepare architectural drawings including floor plans, elevations, sections, 3D views and building approval drawings.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                <img class="img-fluid" src="img/structural-design.jpg" alt="">
+                <div class="service-icon bg-white">
+                    <i class="fa fa-3x fa-building text-primary"></i>
+                </div>
+                <div class="px-4 pb-4">
+                    <h4 class="text-uppercase mb-3">Structural Design</h4>
+                    <p>We design structural drawings including foundations, columns, beams, slabs and reinforcement detailing to ensure structural safety and stability.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="service-item bg-white d-flex flex-column align-items-center text-center">
+                <img class="img-fluid" src="img/construction.jpg" alt="">
+                <div class="service-icon bg-white">
+                    <i class="fa fa-3x fa-hard-hat text-primary"></i>
+                </div>
+                <div class="px-4 pb-4">
+                    <h4 class="text-uppercase mb-3">Construction</h4>
+                    <p>We provide full construction services including project supervision, building construction, renovations and site management.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                <img class="img-fluid" src="img/interior-design.jpg" alt="">
+                <div class="service-icon bg-white">
+                    <i class="fa fa-3x fa-couch text-primary"></i>
+                </div>
+                <div class="px-4 pb-4">
+                    <h4 class="text-uppercase mb-3">Interior Design</h4>
+                    <p>We design interior spaces including ceilings, lighting, finishes, furniture layout and space planning.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                <img class="img-fluid" src="img/land-scaping.jpg" alt="">
+                <div class="service-icon bg-white">
+                    <i class="fa fa-3x fa-leaf text-primary"></i>
+                </div>
+                <div class="px-4 pb-4">
+                    <h4 class="text-uppercase mb-3">Landscaping</h4>
+                    <p>We design and construct outdoor spaces including compound layout, paving, gardens, drainage and boundary walls.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+
+<!-- Portfolio Start -->
+<div class="container-fluid bg-light py-6 px-5">
+    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+        <h1 class="display-5 text-uppercase mb-4">Some Of Our <span class="text-primary">Popular</span> Dream Projects</h1>
+    </div>
+    <div class="row gx-5">
+        <div class="col-12 text-center">
+            <div class="d-inline-block bg-dark-radial text-center pt-4 px-5 mb-5">
+                <ul class="list-inline mb-0" id="portfolio-flters">
+                    <li class="btn btn-outline-primary bg-white p-2 active mx-2 mb-4" data-filter="*">
+                        <img src="img/portfolio-1.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">All</h6>
+                        </div>
+                    </li>
+                    <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".first">
+                        <img src="img/architectural-design.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">Architectural Design</h6>
+                        </div>
+                    </li>
+                    <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".second">
+                        <img src="img/construction.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">Construction</h6>
+                        </div>
+                    </li>
+                    <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".third">
+                        <img src="img/renovation.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">Renovation</h6>
+                        </div>
+                    </li>
+                    <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".fourth">
+                        <img src="img/interior-design.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">Interior Design</h6>
+                        </div>
+                    </li>
+                    <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".fifth">
+                        <img src="img/land-scaping.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">Land Scaping</h6>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row g-5 portfolio-container">
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/architectural-design-portfolio-1.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">4 Bedroom Residential House</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item third">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/renovation-portfolio-1.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fifth">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/land-scapping-portfolio-3.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fourth">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/interior-design-portfolio-2.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/architectural-design-portfolio-6.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">3 Bedroom Residential House</p>
+                </div>
+                <a class="portfolio-btn" href="img/architectural-design-portfolio-6.jpg" data-lightbox="portfolio">
+                    <i class="bi bi-plus text-white"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item second">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/gasana-mum-portfolio.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">4 Bedroom Residual House</p>
+                    <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Kitedde</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fourth">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/interior-design-portfolio-5.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fifth">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/land-scapping-portfolio-4.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/architectural-design-portfolio-7.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">6 Bedroom Residential House</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item second">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/rwabonis-home-portfolio.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">4 Bedroom Residual House</p>
+                    <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Kisaasi</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fourth">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/interior-design-portfolio-9.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/architectural-design-portfolio-8.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">2 Bedroom Apartment Block</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio End -->
+
+<!-- Team Start -->
+<div class="container-fluid py-6 px-5">
+    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+        <h1 class="display-5 text-uppercase mb-4">We Are <span class="text-primary">Professional & Expert</span> Workers</h1>
+    </div>
+    <div class="row g-5 justify-content-center">
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="row g-0">
+                <div class="col-12" style="min-height: 300px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="img/Mirella.jpeg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="bg-light p-4">
+                        <h4 class="text-uppercase">Kajjobe Esther Faith</h4>
+                        <span>CEO & Founder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="row g-0">
+                <div class="col-12" style="min-height: 300px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="img/Alec.jpeg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="bg-light p-4">
+                        <h4 class="text-uppercase">Alec Rabwoni</h4>
+                        <span>C0-Founder & Civil Engineer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="row g-0">
+                <div class="col-12" style="min-height: 300px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="img/Gasana.jpeg" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="bg-light p-4">
+                        <h4 class="text-uppercase">Gasana Paul</h4>
+                        <span>Project/Construction Manager</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+<!-- Appointment Start -->
+<div class="container-fluid py-6 px-5" id="appointment-section">
+    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+        <h1 class="display-5 text-uppercase mb-4">
+            Please <span class="text-primary">Feel Free</span> To Contact Us
+        </h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="contact-form bg-light p-5" style="margin-left:auto">
+                @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+                {
+                    <div class="alert alert-success">
+                        @Model.SuccessMessage
+                    </div>
+                }
+                else if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                {
+                    <div class="alert alert-danger">
+                        @Model.ErrorMessage
+                    </div>
+                }
+                <div id="loadingIndicator" class="alert alert-info d-none" role="alert">
+                    <div class="d-flex align-items-center">
+                        <div class="spinner-border spinner-border-sm me-3" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <span>Sending your message...</span>
+                    </div>
+                </div>
+                <form method="post" id="contactForm">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6">
+                            <input asp-for="Name" class="form-control border-0" placeholder="Your Name"
+                                   style="height: 55px;" />
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input asp-for="Email" class="form-control border-0" placeholder="Your Email"
+                                   style="height: 55px;" />
+                        </div>
+                        <div class="col-12">
+                            <input asp-for="Subject" class="form-control border-0" placeholder="Subject"
+                                   style="height: 55px;" />
+                        </div>
+                        <div class="col-12">
+                            <textarea asp-for="Message" class="form-control border-0" rows="4" placeholder="Message">
+                            </textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit" id="submitBtn">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // Show loading indicator
+        loadingIndicator.classList.remove('d-none');
+
+        // Disable submit button to prevent multiple submissions
+        submitBtn.disabled = true;
+        submitBtn.classList.add('disabled');
+    });
+
+    // Scroll to appointment section when page loads with success/error message
+    document.addEventListener('DOMContentLoaded', function() {
+        const successAlert = document.querySelector('.alert-success');
+        const errorAlert = document.querySelector('.alert-danger');
+
+        if (successAlert || errorAlert) {
+            const appointmentSection = document.getElementById('appointment-section');
+            if (appointmentSection) {
+                appointmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    });
+</script>
+<!-- Appointment End -->
+

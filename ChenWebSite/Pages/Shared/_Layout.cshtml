@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - ChenWebSite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="~/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
+        <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0 align-items-center">
+            <div class="navbar-brand">
+                <img src="~/img/chen-logo.png" alt="WEBUILD" class="site-logo img-fluid"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a asp-page="/Index" class="nav-item nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/Index" ? "active" : "")"
+                        id="home">Home</a>
+                    <a asp-page="/About" class="nav-item nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/About" ? "active" : "")"
+                        id="about">About</a>
+                    <a asp-page="/Service" class="nav-item nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/Service" ? "active" : "")"
+                        id="service">Service</a>
+                    <a asp-page="/Projects" class="nav-item nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/Projects" ? "active" : "")"
+                        id="projects">Our Projects</a>
+                    <a asp-page="/Team" class="nav-item nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/Team" ? "active" : "")"
+                        id="team">The Team</a>
+                    <a asp-page="/Contact" class="nav-item nav-link @(ViewContext.RouteData.Values["page"]?.ToString() == "/Contact" ? "active" : "")"
+                        id="team">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    @RenderBody()
+
+    <!-- Footer Start -->
+    <div class="footer container-fluid position-relative bg-dark bg-light-radial text-white-50 py-6 px-5">
+        <div class="row g-5">
+            <div class="col-sm-6 pe-lg-5">
+                <a asp-page="/Index" class="web-build-footer me-2">
+                    <h4 class="m-0 text-uppercase text-white">Chen Structure Hub</h4>
+                </a>
+                <p><i class="fa fa-phone-alt me-2"></i>+256 775 810996 / +256 757 835809</p>
+                <p><i class="fa fa-envelope me-2"></i>chenstructurehub@gmail.com</p>
+            </div>
+            <div class="col-sm-6 ps-lg-5">
+                <div class="row g-5">
+                    <div class="col-sm-6">
+                        <h4 class="text-white text-uppercase mb-4">Quick Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-2" asp-page="/Index"><i class="fa fa-angle-right me-2"></i>Home</a>
+                            <a class="text-white-50 mb-2" asp-page="/About"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                            <a class="text-white-50 mb-2" asp-page="/Service"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                            <a class="text-white-50 mb-2" asp-page="/Team"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                            <a class="text-white-50" asp-page="/Contact"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark bg-light-radial text-white border-top px-0">
+        <div class="d-flex flex-column flex-md-row justify-content-center">
+            <div class="py-5 px-5 text-center text-md-start">
+                <p class="mb-0">&copy; <a class="text-primary" href="#">ChenHub</a>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/lib/easing/easing.min.js"></script>
+    <script src="~/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="~/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="~/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="~/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/js/main.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+﻿@page
+@model ChenWebSite.Pages.ProjectsModel
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header">
+    <h1 class="display-3 text-uppercase text-white mb-3">Project</h1>
+    <div class="d-inline-flex text-white">
+        <h6 class="text-uppercase m-0"><a asp-page="/Index" class="back-to-home">Home</a></h6>
+        <h6 class="text-white m-0 px-3">/</h6>
+        <h6 class="text-uppercase text-white m-0">Project</h6>
+    </div>
+</div>
+<!-- Page Header Start -->
+<!-- Portfolio Start -->
+<div class="container-fluid bg-light py-6 px-5">
+    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+        <h1 class="display-5 text-uppercase mb-4">Some Of Our <span class="text-primary">Popular</span> Dream Projects</h1>
+    </div>
+    <div class="row gx-5">
+        <div class="col-12 text-center">
+            <div class="d-inline-block bg-dark-radial text-center pt-4 px-5 mb-5">
+                <ul class="list-inline mb-0" id="portfolio-flters">
+                    <li class="btn btn-outline-primary bg-white p-2 active mx-2 mb-4" data-filter="*">
+                        <img src="img/portfolio-1.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">All</h6>
+                        </div>
+                    </li>
+                    <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".first">
+                        <img src="img/architectural-design.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">Architectural Design</h6>
+                        </div>
+                    </li>
+                    <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".second">
+                        <img src="img/construction.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">Construction</h6>
+                        </div>
+                    </li>
+                    <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".third">
+                        <img src="img/renovation.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">Renovation</h6>
+                        </div>
+                    </li>
+                    <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".fourth">
+                        <img src="img/interior-design.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">Interior Design</h6>
+                        </div>
+                    </li>
+                    <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".fifth">
+                        <img src="img/land-scaping.jpg" style="width: 150px; height: 100px;">
+                        <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                            <h6 class="text-white text-uppercase m-0">Land Scaping</h6>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row g-5 portfolio-container">
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/architectural-design-portfolio-1.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">4 Bedroom Residential House</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item third">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/renovation-portfolio-1.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fifth">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/land-scapping-portfolio-3.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fourth">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/interior-design-portfolio-2.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/architectural-design-portfolio-6.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">3 Bedroom Residential House</p>
+                </div>
+                <a class="portfolio-btn" href="img/architectural-design-portfolio-6.jpg" data-lightbox="portfolio">
+                    <i class="bi bi-plus text-white"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item second">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/gasana-mum-portfolio.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">4 Bedroom Residual House</p>
+                    <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Kitedde</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fourth">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/interior-design-portfolio-5.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fifth">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/land-scapping-portfolio-4.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/architectural-design-portfolio-7.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">6 Bedroom Residential House</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item second">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/rwabonis-home-portfolio.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">4 Bedroom Residual House</p>
+                    <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Kisaasi</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fourth">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/interior-design-portfolio-9.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
+            <div class="position-relative portfolio-box">
+                <img class="img-fluid w-100" src="img/architectural-design-portfolio-8.jpg" alt="">
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">2 Bedroom Apartment Block</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio End -->

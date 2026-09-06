@@ -1,0 +1,92 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0; /* removed bottom margin so footer aligns with viewport bottom */
+}
+
+.btn-primary {
+    background-color: #FFC102 !important;
+    border-color: #FFC102 !important;
+}
+
+.bg-primary {
+    background-color: #FFC102 !important;
+}
+
+.border-primary {
+    border-color: #FFC102 !important;
+}
+
+.back-to-home {
+    color: #FFC102 !important;
+    text-decoration: none;
+}
+
+.text-primary {
+    color: #FFC102 !important;
+}
+
+.shadow-sm {
+    text-decoration: none !important;
+    color: #040F28 !important;
+}
+
+.read-more {
+    text-decoration: none !important;
+    color: #FFC102 !important;
+}
+
+.web-build-footer {
+    text-decoration: none !important;
+}
+
+/* Navbar logo styling */
+.navbar-brand {
+  isolation: isolate; /* ensure blend-mode (if used) applies only to this element */
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.navbar-brand .site-logo {
+  max-height: 110px; /* larger so logo displays bigger */
+  width: auto;
+  display: block;
+  opacity: 0.97;
+  /* removed mix-blend-mode so transparent PNG displays normally */
+  object-fit: contain;
+}
+
+.navbar-brand .logo-fallback {
+  display: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.navbar-brand img[onerror] + .logo-fallback {
+  display: inline-block;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand .site-logo {
+    max-height: 140px;
+  }
+}

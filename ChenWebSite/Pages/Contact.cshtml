@@ -1,0 +1,87 @@
+﻿@page
+@model ChenWebSite.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header">
+    <h1 class="display-3 text-uppercase text-white mb-3">Contact</h1>
+    <div class="d-inline-flex text-white">
+        <h6 class="text-uppercase m-0"><a asp-page="/Index" class="back-to-home">Home</a></h6>
+        <h6 class="text-white m-0 px-3">/</h6>
+        <h6 class="text-uppercase text-white m-0">Contact</h6>
+    </div>
+</div>
+<!-- Page Header Start -->
+<!-- Contact Start -->
+<div class="container-fluid py-6 px-5">
+    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+        <h1 class="display-5 text-uppercase mb-4">Please <span class="text-primary">Feel Free</span> To Contact Us
+        </h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="contact-form bg-light p-5" style="margin-left:auto">
+                @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+                {
+                    <div class="alert alert-success">
+                        @Model.SuccessMessage
+                    </div>
+                }
+                else if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                {
+                    <div class="alert alert-danger">
+                        @Model.ErrorMessage
+                    </div>
+                }
+                <div id="loadingIndicator" class="alert alert-info d-none" role="alert">
+                    <div class="d-flex align-items-center">
+                        <div class="spinner-border spinner-border-sm me-3" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <span>Sending your message...</span>
+                    </div>
+                </div>
+                <form method="post" id="contactForm">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6">
+                            <input asp-for="Name" class="form-control border-0" placeholder="Your Name"
+                                   style="height: 55px;" />
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input asp-for="Email" class="form-control border-0" placeholder="Your Email"
+                                   style="height: 55px;" />
+                        </div>
+                        <div class="col-12">
+                            <input asp-for="Subject" class="form-control border-0" placeholder="Subject"
+                                   style="height: 55px;" />
+                        </div>
+                        <div class="col-12">
+                            <textarea asp-for="Message" class="form-control border-0" rows="4" placeholder="Message">
+                            </textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit" id="submitBtn">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // Show loading indicator
+        loadingIndicator.classList.remove('d-none');
+
+        // Disable submit button to prevent multiple submissions
+        submitBtn.disabled = true;
+        submitBtn.classList.add('disabled');
+    });
+</script>
+<!-- Contact End -->
