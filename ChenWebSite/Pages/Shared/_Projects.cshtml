@@ -2,89 +2,170 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    // Portfolio items with categories
+    var portfolioItems = new List<dynamic>
+    {
+        // Original items
+        new { Image = "img/projects/architectural-design-portfolio-1.jpg", Category = "first", Title = "4 Bedroom Residential House", Location = "" },
+        new { Image = "img/projects/renovation-portfolio-1.jpg", Category = "third", Title = "", Location = "" },
+        new { Image = "img/projects/land-scapping-portfolio-3.jpg", Category = "fifth", Title = "", Location = "" },
+        new { Image = "img/projects/interior-design-portfolio-2.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/architectural-design-portfolio-6.jpg", Category = "first", Title = "3 Bedroom Residential House", Location = "" },
+        new { Image = "img/projects/gasana-mum-portfolio.jpg", Category = "second", Title = "4 Bedroom Residential House", Location = "Kitedde" },
+        new { Image = "img/projects/interior-design-portfolio-5.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/land-scapping-portfolio-4.jpg", Category = "fifth", Title = "", Location = "" },
+        new { Image = "img/projects/architectural-design-portfolio-7.jpg", Category = "first", Title = "6 Bedroom Residential House", Location = "" },
+        new { Image = "img/projects/rwabonis-home-portfolio.jpg", Category = "second", Title = "4 Bedroom Residential House", Location = "Kisaasi" },
+        new { Image = "img/projects/interior-design-portfolio-9.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/architectural-design-portfolio-8.jpg", Category = "first", Title = "2 Bedroom Apartment Block", Location = "" },
+
+        // New Architectural Design - Apartment Block images
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Apartment Block 1.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Apartment Block 2.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Apartment Block 3.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Apartment Block 4.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Apartment Block 5.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Apartment Block 7.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Apartment Block 8.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Apartment Block 9.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Apartment Block 10.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Apartment Block 11.jpg", Category = "first", Title = "", Location = "" },
+
+        // New Architectural Design - Commercial Block images
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Commercial block 1.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Commercial block 2.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Commercial block 3.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Commercial block 4.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Commercial block 5.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Commercial block 6.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Commercial block 7.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Commercial block 8.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Commercial block 9.jpg", Category = "first", Title = "", Location = "" },
+
+        // New Architectural Design - Residential Block images
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 2.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 3.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 4.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 5.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 6.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 7.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 8.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 9.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 10.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 11.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 12.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 13.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 14.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 15.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 16.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 17.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 18.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 19.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 20.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 21.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 22.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 23.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 25.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 26.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 27.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 29.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 30.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 31.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 33.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 34.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 35.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 36.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 37.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 38.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 39.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 40.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 41.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 42.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 43.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 44.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 45.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 46.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 47.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 48.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 49.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 50.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 51.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 52.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 53.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 54.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 55.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 56.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 57.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 58.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 59.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 60.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 61.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 62.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 63.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 64.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block 65.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block.jpg", Category = "first", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Architectural_Desgin/Residential block31.jpg", Category = "first", Title = "", Location = "" },
+
+        // New Interior Design images
+        new { Image = "img/projects/more_projects/Interior Design 1.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 2.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 3.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 4.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 5.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 6.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 7.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 8.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 9.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 10.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 11.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 12.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 13.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 15.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 16.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 17.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 18.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 19.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 20.jpg", Category = "fourth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Interior Design 21.jpg", Category = "fourth", Title = "", Location = "" },
+
+        // New Landscaping images
+        new { Image = "img/projects/more_projects/Landscaping 1.jpg", Category = "fifth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Landscaping 2.jpg", Category = "fifth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Landscaping 3.jpg", Category = "fifth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Landscaping 4.jpg", Category = "fifth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Landscaping 5.jpg", Category = "fifth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Landscaping 6.jpg", Category = "fifth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Landscaping 7.jpg", Category = "fifth", Title = "", Location = "" },
+        new { Image = "img/projects/more_projects/Landscaping 8.jpg", Category = "fifth", Title = "", Location = "" }
+    };
+
+    // Shuffle all items for "All Categories" view
+    var random = new Random();
+    var shuffledItems = portfolioItems.OrderBy(x => random.Next()).ToList();
 }
 
-
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/architectural-design-portfolio-1.jpg" alt="">
-        <div class="portfolio-title shadow-sm">
-            <p class="h4 text-uppercase">4 Bedroom Residential House</p>
+@foreach (var item in shuffledItems)
+{
+    <div class="col-xl-4 col-lg-4 col-md-4 portfolio-item @item.Category">
+        <div class="position-relative portfolio-box">
+            <img class="img-fluid w-100" src="@item.Image" alt="">
+            @if (!string.IsNullOrEmpty(item.Title))
+            {
+                <div class="portfolio-title shadow-sm">
+                    <p class="h4 text-uppercase">@item.Title</p>
+                    @if (!string.IsNullOrEmpty(item.Location))
+                    {
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>@item.Location</span>
+                    }
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(item.Image))
+            {
+                <a class="portfolio-btn" href="@item.Image" data-lightbox="portfolio">
+                    <i class="bi bi-plus text-white"></i>
+                </a>
+            }
         </div>
     </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item third">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/renovation-portfolio-1.jpg" alt="">
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fifth">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/land-scapping-portfolio-3.jpg" alt="">
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fourth">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/interior-design-portfolio-2.jpg" alt="">
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/architectural-design-portfolio-6.jpg" alt="">
-        <div class="portfolio-title shadow-sm">
-            <p class="h4 text-uppercase">3 Bedroom Residential House</p>
-        </div>
-        <a class="portfolio-btn" href="img/projects/architectural-design-portfolio-6.jpg" data-lightbox="portfolio">
-            <i class="bi bi-plus text-white"></i>
-        </a>
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item second">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/gasana-mum-portfolio.jpg" alt="">
-        <div class="portfolio-title shadow-sm">
-            <p class="h4 text-uppercase">4 Bedroom Residential House</p>
-            <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Kitedde</span>
-        </div>
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fourth">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/interior-design-portfolio-5.jpg" alt="">
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fifth">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/land-scapping-portfolio-4.jpg" alt="">
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/architectural-design-portfolio-7.jpg" alt="">
-        <div class="portfolio-title shadow-sm">
-            <p class="h4 text-uppercase">6 Bedroom Residential House</p>
-        </div>
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item second">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/rwabonis-home-portfolio.jpg" alt="">
-        <div class="portfolio-title shadow-sm">
-            <p class="h4 text-uppercase">4 Bedroom Residential House</p>
-            <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>Kisaasi</span>
-        </div>
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item fourth">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/interior-design-portfolio-9.jpg" alt="">
-    </div>
-</div>
-<div class="col-xl-4 col-lg-4 col-md-4 portfolio-item first">
-    <div class="position-relative portfolio-box">
-        <img class="img-fluid w-100" src="img/projects/architectural-design-portfolio-8.jpg" alt="">
-        <div class="portfolio-title shadow-sm">
-            <p class="h4 text-uppercase">2 Bedroom Apartment Block</p>
-        </div>
-    </div>
-</div>
+}
