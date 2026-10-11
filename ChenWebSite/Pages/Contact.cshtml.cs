@@ -6,6 +6,7 @@ using ChenWebSite.Services.Interfaces;
 
 namespace ChenWebSite.Pages
 {
+    [ValidateAntiForgeryToken]
     public class ContactModel : PageModel
     {
         private readonly IEmailService _emailService;
