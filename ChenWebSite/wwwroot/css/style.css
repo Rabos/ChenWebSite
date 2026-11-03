@@ -178,12 +178,20 @@
 }
 
 /* Uniform tile size: every project image fills the same 3:2 frame */
-.portfolio-box > img {
+/*.portfolio-box > img {
     display: block;
     width: 100%;
     aspect-ratio: 3 / 2;
     object-fit: cover;
     object-position: center;
+}*/
+.portfolio-box > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    object-position: center;
+    background: transparent;
 }
 
 .portfolio-title {
